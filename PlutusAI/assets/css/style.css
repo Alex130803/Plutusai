@@ -1,0 +1,815 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a1a, #121212, #222222, #464646);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Keyframe for Gradient Animation */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* ==============================  LANDING PAGE  ==================================== */
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #121212;
+    color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid transparent;
+    background-image: linear-gradient(to bottom, #121212, #121212), 
+                      linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+    color: #f0a500; /* Gold hover effect */
+}
+
+.navbar .cta-button {
+    padding: 10px 20px;
+    background-color: #f0a500; /* Gold button */
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .cta-button:hover {
+    background-color: #e09e00; /* Darker gold on hover */
+}
+
+/* Particles.js Background */
+#particles-js {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: transparent; /* Keeps it invisible except for particles */
+}
+
+/* Landing Page Section */
+.landing_page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full screen height */
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.landing_page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f0a500; /* Gold accent for the heading */
+}
+
+.landing_page p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.landing-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: #121212;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.landing-btn:hover {
+    background-color: #e09e00;
+}
+
+/* Left and Right Section Styling */
+.right_side_lp {
+    width: 50%;
+}
+
+.left_side_lp {
+    width: 50%;
+}
+
+.left_side_lp, .right_side_lp {
+    position: relative;
+    z-index: 1; /* Ensure these elements are above the particles */
+}
+
+.under_img_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: #121212;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.under_img_btn:hover {
+    background-color: #e09e00;
+}
+
+/* ==============================    ABOUT SECTION  ==================================== */
+
+.about{
+    height: 114vh;
+    background-image: url("/assets/img/gold_bg.jpg");
+}
+
+.logo_partners{
+    height: auto;
+    width: 154px;
+}
+
+.partners{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 74%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background-color: #121212; /* Black background */
+    border: 3px solid transparent;
+    background-image: linear-gradient(135deg, #121212, #121212), 
+                      linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 20px; /* Smooth corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* White shadow below */
+    padding: 20px;
+    color: #f5f5f5; /* Optional text color inside the box */
+}
+
+.about_in{
+    display: flex;
+    flex-direction: column;
+    margin-top: 94px;
+}
+
+.p_about{
+    align-self: center;
+    color: whitesmoke;
+    font-weight: bolder;
+    margin-bottom: 8px;
+}
+
+.abt p{
+    color: whitesmoke;
+    align-self: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #f0a500;
+    margin-bottom: 20px;
+}
+
+.about .stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.about .stats div {
+    text-align: center;
+}
+
+.about .stats h3 {
+    font-size: 2rem;
+    color: #f0a500;
+}
+
+/* About Section - Enhanced Styling */
+.abt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 40px;
+    background-color: #121212;
+    border: 3px solid transparent;
+    background-image: linear-gradient(135deg, #121212, #121212), 
+                      linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+    margin-left: 74px;
+    margin-right: 74px;
+}
+
+.left_side_about {
+    width: 50%;
+    color: #f5f5f5;
+}
+
+.about_heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0a500; /* Gold accent for heading */
+}
+
+.left_side_about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: whitesmoke;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stats div {
+    text-align: center;
+    flex: 1;
+}
+
+.stats h3 {
+    font-size: 2rem;
+    color: #f0a500; /* Gold for numbers */
+}
+
+.stats p {
+    font-size: 1rem;
+    color: #f5f5f5; /* White for labels */
+}
+
+.right_side_about {
+    width: 40%; /* Adjust width for better balance */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plutus_img2 {
+    max-height: 400px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds depth to the image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.plutus_img2:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+
+/* ==============================    Why I was created SECTION  ==================================== */
+
+
+
+.why_created_section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #121212, #121212),
+                linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    justify-self: center;
+    width: 74%;
+    background: center;
+    border-radius: 20px 0px 20px 0px;
+    margin-bottom: 50px;
+}
+
+/* Main Content Inside Section */
+.why_created {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: auto;
+    width: 95%; /* Keep content centered */
+    max-width: 1200px; /* Restrict maximum width */
+    padding: 25px;
+}
+
+/* Image Styling */
+.why_image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why_image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.why_image img:hover {
+    transform: scale(1.05);
+}
+
+/* Content Styling */
+.why_content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0a500; /* Gold heading */
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: 1fr; /* One column by default */
+    gap: 20px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .steps {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+.step {
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #866a05, #ac790b, #ba8d45, #99710b); /* Gold gradient */
+    color: #121212;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #121212;
+}
+
+.step p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.step:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* ==============================    Features SECTION  ==================================== */
+
+.features_section {
+    height: 114vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between rows */
+    margin-bottom: 64px;
+}
+
+/* Shared Styling for Boxes */
+.box1, .box2, .box3 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 38vh;
+    gap: 14px;
+}
+
+/* Shared Styling for Inner Box Components */
+.box1_1, .box1_2,
+.box2_1, .box2_2,
+.box3_1, .box3_2, .box3_3 {
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #121212; /* Inner box black background */
+    color: #f5f5f5; /* White text */
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 3px solid transparent;
+    background-image: linear-gradient(#121212, #121212), 
+                      linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-clip: padding-box, border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    padding: 20px;
+}
+
+/* Hover Effect for Inner Boxes */
+.box1_1:hover, .box1_2:hover,
+.box2_1:hover, .box2_2:hover,
+.box3_1:hover, .box3_2:hover, .box3_3:hover {
+    transform: scale(1.01); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5); /* Brightened hover effect */
+}
+
+/* Box-Specific Dimensions */
+.box1_1 {
+    width: 65%;
+}
+
+.box1_2 {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.box2_1 {
+    width: 45%;
+}
+
+.box2_2 {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+#lottie-animation5 {
+    width: 90px; 
+    height: 90px; 
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+#lottie-animation6 {
+    width: 110px; 
+    height: 110px; 
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+#lottie-animation7 {
+    width: 90px; 
+    height: 90px; 
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+.box3_1, .box3_2, .box3_3 {
+    width: 33%; /* Equal width for all feature boxes */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 15px; /* Space between animation and text */
+    text-align: center;
+}
+
+
+#lottie-animation {
+    width: 250px; /* Adjusted size for animations */
+    height: 250px;
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+.box1_1 {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure animation stays inside the box */
+}
+
+/* Lottie Animation Styling */
+#lottie-animation2 {
+    width: 120px; /* Adjusted size for animations */
+    height: 120px;
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+#lottie-animation3 {
+    width: 200px; 
+    height: 200px; 
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+#lottie-animation4 {
+    width: 120px; /* Adjusted size for animations */
+    height: 120px;
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+.canvas {
+    background: linear-gradient(135deg, #866a05, #3a2c07); /* Add gradient background */
+    padding: 15px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box1_1div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.box1_2div{
+    display: flex;
+    flex-direction: column;
+}
+
+.box2_2div{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Headings and Descriptions for Features 5, 6, and 7 */
+.box3_1 h3, .box3_2 h3, .box3_3 h3 {
+    font-size: 1.5rem; /* Slightly larger for emphasis */
+    color: #f0a500; /* Gold for the headings */
+    margin: 5px 0; /* Adjust spacing */
+}
+
+.box3_1 p, .box3_2 p, .box3_3 p {
+    font-size: 1rem;
+    color: #f5f5f5; /* White text for readability */
+    line-height: 1.4; /* Improved readability */
+}
+
+.box2_2 p{
+    margin-bottom: 15px;
+}
+
+
+
+/*======================================== FAQ Section =========================================
+
+/* Section Borders */
+.section_border {
+    display: flex;
+    height: 68vh;
+    align-items: center;
+}
+
+/* FAQ Section Styling */
+.faq_section {
+    padding: 40px 20px;
+    background: #121212;
+    border-radius: 15px;
+    color: #000000;
+    font-weight: bolder;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.faq_title {
+    text-align: center;
+    font-size: 2rem;
+    color: #f0a500; /* Gold color for the title */
+    margin-bottom: 20px;
+}
+
+/* Individual FAQ Item Styling */
+.faq_item {
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #866a05, #ac790b, #ba8d45, #99710b);
+    background-clip: padding-box, border-box;
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.faq_item:hover {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* FAQ Question */
+.faq_question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.faq_icon {
+    font-size: 1.5rem;
+    color: #000000;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* FAQ Answer */
+.faq_answer {
+    font-size: 1rem;
+    color: #201f1f;
+    font-weight: lighter;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+    line-height: 1.5;
+}
+
+/* Animation Container */
+.animation_faq {
+    position: relative; /* Creates a positioning context for child elements */
+    width: 400px; /* Set the width of the container */
+    height: 400px; /* Set the height of the container */
+    margin: auto; /* Centers the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lottie Animation */
+#lottie-animation8 {
+    position: absolute; /* Places the animation behind other elements */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the animation fills the container */
+    height: 100%;
+    z-index: 1; /* Lower z-index places it behind the image */
+    background: transparent;
+}
+
+/* FAQ Image */
+.faq_image {
+    position: relative; /* Keeps the image in front */
+    z-index: 2; /* Higher z-index ensures it's above the animation */
+    width: 100%; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/*======================================  footbar  ======================================= */
+
+/* Footer Section Borders */
+.footer_section {
+    padding: 20px 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    background-image: linear-gradient(#121212, #121212),
+                      linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+    background-clip: padding-box, border-box;
+}
+
+/* Footer Container */
+.footer {
+    background-color: #121212; /* Dark footer background */
+    color: #f5f5f5; /* Light text */
+    padding: 40px 50px; /* Increased padding for better spacing */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer Content Layout */
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+    gap: 30px;
+}
+
+/* Footer Logo Section */
+.footer_logo {
+    flex: 1; /* Equal space distribution */
+    max-width: 300px; /* Limits width for better alignment */
+}
+
+.footer_logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f0a500; /* Gold text for the logo */
+}
+
+.footer_logo p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #f5f5f5; /* Light description text */
+}
+
+/* Footer Links Section */
+.footer_links, .footer_social {
+    flex: 1; /* Equal space distribution */
+    max-width: 200px; /* Limits width for alignment */
+}
+
+.footer_links h3, .footer_social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f0a500; /* Gold headings */
+}
+
+.footer_links ul, .footer_social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links li, .footer_social li {
+    margin-bottom: 8px;
+}
+
+.footer_links a, .footer_social a {
+    text-decoration: none;
+    color: #f5f5f5; /* Light text for links */
+    transition: color 0.3s ease;
+}
+
+.footer_links a:hover, .footer_social a:hover {
+    color: #f0a500; /* Gold hover effect */
+}
+
+/* Footer Social Section */
+.footer_social img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Footer Bottom */
+.footer_bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border above the bottom text */
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6); /* Slightly muted text for copyright */
+    text-align: center; /* Center-align the bottom text */
+}
+
+

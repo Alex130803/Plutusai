@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlutusAI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">PlutusAI</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-button">Get Started</button>
+    </nav>
+
+    <section class="landing_page">
+        <div id="particles-js"></div>
+        <div class="left_side_lp">
+            <img src="assets/img/Plutus.png" alt="PlutusAI">
+            <div class="buttons"></div>
+            <a class="under_img_btn" href="">Stake</a>
+            <a class="under_img_btn" href="">Buy $PlutusAI</a>
+        </div>
+
+        <div class="right_side_lp">
+            <h1>Welcome to PlutusAI</h1>
+            <p>Your gateway to intelligent wealth management.</p>
+            <a href="#features" class="landing-btn">Explore Features</a>
+        </div>
+    </section>
+
+
+    <section class="about">
+        <div class="about_in">
+            <p class="p_about">Strategic Partners</p>
+            <div class="partners">
+            <img class="logo_partners" src="assets/img/dexscrenner.png" alt="Dexscrenner">
+            <img class="logo_partners" src="assets/img/dextool.png" alt="Dextools">
+            <img class="logo_partners" src="assets/img/cryptopanic.png" alt="Crypto Panic">
+            </div>
+        </div>
+
+        <div class="abt">
+            <div class="left_side_about">
+                <h2 class="about_heading">Why Choose PlutusAI?</h2>
+                <p>
+                    PlutusAI is your ultimate partner in wealth management, utilizing advanced AI algorithms 
+                    to help users maximize their investments. Inspired by the Greek god of wealth, we bring 
+                    innovation and intelligence to the financial world.
+                </p>
+                <div class="stats">
+                    <div>
+                        <h3>10K+</h3>
+                        <p>Active Users</p>
+                    </div>
+                    <div>
+                        <h3>500K+</h3>
+                        <p>Successful Trades</p>
+                    </div>
+                    <div>
+                        <h3>99.9%</h3>
+                        <p>Uptime Guarantee</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="right_side_about">
+                <img class="plutus_img2" src="assets/img/plutus_img2.png" alt="Plutus">
+            </div>
+        </div>
+    </section>
+
+    <section class="why_created_section">
+        <div class="why_created">
+            <div class="why_image">
+                <img src="assets/img/Plutus_born.png" alt="PlutusAI Purpose">
+            </div>
+            <div class="why_content">
+                <h2>Why I Was Created and Born</h2>
+                <div class="steps">
+                    <div class="step">
+                        <h3>Monitor the Market</h3>
+                        <p>
+                            PlutusAI continuously scans for new cryptocurrencies that have just had liquidity provided, ensuring no potential opportunity is missed in the fast-paced crypto space.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>Analyze the Potential</h3>
+                        <p>
+                            Using advanced algorithms and specific parameters, PlutusAI evaluates each coin's growth potential, filtering out only the most promising ones for further consideration.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>Automated Insights</h3>
+                        <p>
+                            PlutusAI operates autonomously, identifying high-potential cryptocurrencies and compiling detailed insights for the community, saving investors countless hours of manual analysis.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>Share and Empower</h3>
+                        <p>
+                            Once a promising cryptocurrency is identified, PlutusAI instantly shares the findings on Telegram, Instagram, and X, empowering the community to act on growth opportunities quickly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features_section">
+        <div class="box1">
+            <div class="box1_1">
+                <canvas class="canvas" id="myChart" style="max-width: 600px; margin: auto;"></canvas>
+                <div class="box1_1div">
+                    <h3>Feature 1</h3>
+                    <p>Real-Time Analytics – Gain insights into token performance with live data visualization.</p>
+                </div>
+            </div>
+            <div class="box1_2">
+                <div id="lottie-animation3"></div>
+                <div class="box1_2div">
+                    <h3>Feature 2</h3>
+                    <p>Smart Portfolio Tracking – Monitor your investments and maximize returns effortlessly.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box2_1">
+                <h3>Feature 3</h3>
+                <p>Custom Alerts – Stay ahead with personalized notifications for key market trends.</p>
+            </div>
+            <div class="box2_2">
+                <h3>Feature 4</h3>
+                <p>Social Integration – Connect with Telegram, Instagram, and X for seamless updates.</p>
+                <div class="box2_2div">
+                    <div id="lottie-animation5"></div>
+                    <div id="lottie-animation6"></div>
+                    <div id="lottie-animation7"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="box3_1">
+                <div id="lottie-animation4"></div>
+                <h3>Feature 5</h3>
+                <p>Easy Transactions – Simplified processes for buying, selling, and staking crypto.</p>
+            </div>
+            <div class="box3_2">
+                <div id="lottie-animation2"></div>
+                <h3>Feature 6</h3>
+                <p>Market Analysis – Uncover patterns and trends with AI-driven predictions.</p>
+            </div>
+            <div class="box3_3">
+                <div id="lottie-animation"></div>
+                <h3>Feature 7</h3>
+                <p>Wealth Insights – Leverage AI to optimize your cryptocurrency portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section_border">
+        <div class="faq_section">
+            <h2 class="faq_title">Frequently Asked Questions</h2>
+            <div class="faq_item">
+                <div class="faq_question" onclick="toggleFaq(1)">
+                    What is PlutusAI?
+                    <span class="faq_icon">+</span>
+                </div>
+                <div class="faq_answer" id="faq1">
+                    PlutusAI is an AI-driven platform designed to optimize investments and discover growth opportunities in the cryptocurrency market.
+                </div>
+            </div>
+            <div class="faq_item">
+                <div class="faq_question" onclick="toggleFaq(2)">
+                    How does PlutusAI work?
+                    <span class="faq_icon">+</span>
+                </div>
+                <div class="faq_answer" id="faq2">
+                    PlutusAI scans new cryptocurrencies, analyzes potential growth factors, and shares valuable insights across multiple platforms like Telegram and X.
+                </div>
+            </div>
+            <div class="faq_item">
+                <div class="faq_question" onclick="toggleFaq(3)">
+                    Is PlutusAI free to use?
+                    <span class="faq_icon">+</span>
+                </div>
+                <div class="faq_answer" id="faq3">
+                    PlutusAI offers free features, with premium options available for advanced analytics and tools.
+                </div>
+            </div>
+        </div>
+
+        <div class="animation_faq">
+            <div id="lottie-animation8"></div>
+            <img src="assets/img/plutus_faq.png" alt="Plutus FAQ" class="faq_image">
+        </div>
+    </section>
+
+    <section class="footer_section">
+        <div class="footer">
+            <div class="footer_content">
+                <div class="footer_logo">
+                    <a href="#">PlutusAI</a>
+                    <p>Your gateway to intelligent wealth management.</p>
+                </div>
+                <div class="footer_links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer_social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#"><img src="assets/img/twitter_icon.png" alt="Twitter"> Twitter</a></li>
+                        <li><a href="#"><img src="assets/img/telegram_icon.png" alt="Telegram"> Telegram</a></li>
+                        <li><a href="#"><img src="assets/img/instagram_icon.png" alt="Instagram"> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>&copy; 2024 PlutusAI. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#f0a500" /* Gold-colored particles */
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#f0a500",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    attract: {
+                        enable: false
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 200,
+                        line_linked: {
+                            opacity: 0.6
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani1.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation2'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani2.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation3'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani3.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation4'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani4.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation5'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/xani5.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation6'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani6.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation7'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani7.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the animation
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation8'), // Target the placeholder
+            renderer: 'svg', // Use SVG rendering
+            loop: true, // Set to true for continuous looping
+            autoplay: true, // Start playing automatically
+            path: 'assets/img/ani8.json' // Path to your Lottie file
+        });
+    </script>
+
+    <script>
+        // Initialize the chart
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar', // Bar chart
+            data: {
+                labels: ['Feature A', 'Feature B', 'Feature C', 'Feature D', 'Feature E'], // Labels
+                datasets: [{
+                    label: 'Usage Statistics', // Dataset label
+                    data: [12, 19, 8, 15, 10], // Data values
+                    backgroundColor: [
+                        'rgba(134, 106, 5, 0.8)', // #866a05
+                        'rgba(172, 121, 11, 0.8)', // #ac790b
+                        'rgba(186, 141, 69, 0.8)', // #ba8d45
+                        'rgba(153, 113, 11, 0.8)', // #99710b
+                        'rgba(134, 106, 5, 0.8)'  // Repeated for a nice flow
+                    ],
+                    borderColor: [
+                        'rgba(134, 106, 5, 1)', // #866a05
+                        'rgba(172, 121, 11, 1)', // #ac790b
+                        'rgba(186, 141, 69, 1)', // #ba8d45
+                        'rgba(153, 113, 11, 1)', // #99710b
+                        'rgba(134, 106, 5, 1)'  // Repeated for matching stroke
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 5, // Rounded corners on bars
+                    barPercentage: 0.6 // Adjust bar width
+                }]
+            },
+            options: {
+                responsive: true, // Makes the chart responsive
+                maintainAspectRatio: false, // Adjusts to fit container
+                plugins: {
+                    legend: {
+                        display: true, // Show legend
+                        labels: {
+                            color: '#f5f5f5', // White text for the legend
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#f5f5f5', // White text for X-axis
+                            font: {
+                                size: 12
+                            }
+                        },
+                        grid: {
+                            display: false // Hide grid lines for X-axis
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: '#f5f5f5', // White text for Y-axis
+                            font: {
+                                size: 12
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.2)', // Subtle white grid lines
+                        },
+                        beginAtZero: true // Start Y-axis at 0
+                    }
+                },
+                animation: {
+                    duration: 1500, // Animation duration
+                    easing: 'easeOutBounce' // Smooth easing
+                }
+            }
+        });
+    </script>
+
+    <script>
+    function toggleFaq(id) {
+    const answer = document.getElementById(`faq${id}`);
+    const icon = answer.previousElementSibling.querySelector('.faq_icon');
+
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.textContent = '+'; // Change back to plus icon
+    } else {
+        answer.style.display = 'block';
+        icon.textContent = '-'; // Change to minus icon
+    }
+    }
+    </script>
+
+
+
+
+
+</body>
+</html>
