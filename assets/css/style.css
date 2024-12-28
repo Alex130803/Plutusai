@@ -1021,11 +1021,11 @@ body{
     /* General Layout Adjustments */
     .abt {
       gap: 20px;
-      margin: 20px;
+      margin: 0px auto;
       display: flex;
       flex-direction: column-reverse;
       text-align: center;
-      width: 84%;
+      width: 88%;
       justify-self: center;
     }
 
@@ -1033,6 +1033,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 4px; 
+        margin-bottom: 54px;
     }
 
     .about h2{
@@ -1048,6 +1049,10 @@ body{
         font-size: 1.5rem;
         margin-bottom: 20px;
         color: #f0a500;
+    }
+
+    .why_created_section{
+        margin: auto;
     }
 
     .step h3 {
@@ -1110,6 +1115,7 @@ body{
   
     .about {
       height: 114vh;
+      
     }
   
     /* Coin Info */
@@ -1123,24 +1129,30 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        height: 154vh;
+        height: 234vh;
         margin-top: 40px;
         justify-content: flex-start;
     }
   
-    .box1 {
-      display: none;
+    .box1_1, .box1_2{
+        display: flex;
+        flex-direction: column;
     }
   
-    .box2, .box3 {
+    .box1, .box2, .box3 {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
+        height: auto;
+    }
 
+    #lottie-animation3{
+        width: 150px;
+        height: auto;
     }
   
-    .box2_1, .box2_2, .box3_1, .box3_2, .box3_3 {
+    .box1_1, .box1_2, .box2_1, .box2_2, .box3_1, .box3_2, .box3_3 {
         width: 90%;
         height: 30vh;
         padding: 20px;
