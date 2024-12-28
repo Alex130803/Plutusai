@@ -15,6 +15,7 @@ body{
     background: linear-gradient(135deg, #1a1a1a, #121212, #222222, #464646);
     background-size: 400% 400%;
     animation: gradient-animation 10s ease infinite;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Keyframe for Gradient Animation */
@@ -1114,7 +1115,7 @@ body{
     }
   
     .about {
-      height: 114vh;
+      height: 128vh;
       
     }
   
@@ -1138,6 +1139,8 @@ body{
         display: flex;
         flex-direction: column;
     }
+
+    
   
     .box1, .box2, .box3 {
         display: flex;
@@ -1163,7 +1166,6 @@ body{
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         text-align: center;
     }
-
   
     .faq_section {
       width: 92%;
