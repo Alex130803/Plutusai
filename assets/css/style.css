@@ -1168,8 +1168,20 @@ body{
     }
 
     .box3_3{
+        width: fit-content; /* Dynamically adapts to the content width */
+        height: fit-content; /* Dynamically adapts to the content height */
+        padding: 20px; /* Adds padding inside the box */
+        border: 3px solid transparent;
+        background-image: linear-gradient(#121212, #121212),
+            linear-gradient(135deg, #c49b0b, #f0a500, #e5b567, #b8860b);
+        background-clip: padding-box, border-box;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        margin: 0 auto 20px auto; /* Centers the box and adds margin below */
+        text-align: center; /* Centers text inside */
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
   
