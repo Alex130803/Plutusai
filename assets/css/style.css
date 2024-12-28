@@ -1166,6 +1166,12 @@ body{
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         text-align: center;
     }
+
+    .box3_3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
   
     .faq_section {
       width: 92%;
