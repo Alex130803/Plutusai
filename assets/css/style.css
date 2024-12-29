@@ -1118,6 +1118,10 @@ body{
       height: 128vh;
       width: fit-content;
     }
+
+    .box3_3{
+        height: fit-content;
+    }
   
     /* Coin Info */
     .coin_info input {
