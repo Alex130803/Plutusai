@@ -1159,7 +1159,7 @@ body{
         height: auto;
     }
   
-    .box1_1, .box1_2, .box2_1, .box2_2, .box3_1, .box3_2, .box3_3 {
+    .box1_1, .box1_2, .box2_1, .box2_2, .box3_1, .box3_2{
         width: 90%;
         height: 30vh;
         padding: 20px;
