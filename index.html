@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
@@ -20,7 +23,7 @@
 
     <section class="landing_page">
         <div id="particles-js"></div>
-        
+
         <!-- Left Side Content -->
         <div class="left_side_lp">
             <img src="assets/img/Plutus.png" alt="PlutusAI">
@@ -30,7 +33,7 @@
                 <a class="under_img_btn" href="">Buy $PlutusAI</a>
             </div>
         </div>
-    
+
         <!-- Right Side Content -->
         <div class="right_side_lp">
             <div class="coin_info">
@@ -39,23 +42,23 @@
                 <input type="text" id="contractAddress" placeholder="Enter Contract Address">
                 <button onclick="fetchCoinData()">Search</button>
             </div>
-        
+
             <!-- Placeholder for Coin Data -->
             <div id="results" class="coin_results">
                 <!-- Data will be dynamically injected here -->
             </div>
         </div>
     </section>
-    
+
 
 
     <section class="about">
         <div class="about_in">
             <p class="p_about">Strategic Partners</p>
             <div class="partners">
-            <img class="logo_partners" src="assets/img/dexscrenner.png" alt="Dexscrenner">
-            <img class="logo_partners" src="assets/img/dextool.png" alt="Dextools">
-            <img class="logo_partners" src="assets/img/cryptopanic.png" alt="Crypto Panic">
+                <img class="logo_partners" src="assets/img/dexscrenner.png" alt="Dexscrenner">
+                <img class="logo_partners" src="assets/img/dextool.png" alt="Dextools">
+                <img class="logo_partners" src="assets/img/cryptopanic.png" alt="Crypto Panic">
             </div>
         </div>
 
@@ -63,8 +66,8 @@
             <div class="left_side_about">
                 <h2 class="about_heading">Why Choose PlutusAI?</h2>
                 <p>
-                    PlutusAI is your ultimate partner in wealth management, utilizing advanced AI algorithms 
-                    to help users maximize their investments. Inspired by the Greek god of wealth, we bring 
+                    PlutusAI is your ultimate partner in wealth management, utilizing advanced AI algorithms
+                    to help users maximize their investments. Inspired by the Greek god of wealth, we bring
                     innovation and intelligence to the financial world.
                 </p>
                 <div class="stats">
@@ -82,7 +85,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="right_side_about">
                 <img class="plutus_img2" src="assets/img/plutus_img2.png" alt="Plutus">
             </div>
@@ -100,25 +103,29 @@
                     <div class="step">
                         <h3>Monitor the Market</h3>
                         <p>
-                            PlutusAI continuously scans for new cryptocurrencies that have just had liquidity provided, ensuring no potential opportunity is missed in the fast-paced crypto space.
+                            PlutusAI continuously scans for new cryptocurrencies that have just had liquidity provided,
+                            ensuring no potential opportunity is missed in the fast-paced crypto space.
                         </p>
                     </div>
                     <div class="step">
                         <h3>Analyze the Potential</h3>
                         <p>
-                            Using advanced algorithms and specific parameters, PlutusAI evaluates each coin's growth potential, filtering out only the most promising ones for further consideration.
+                            Using advanced algorithms and specific parameters, PlutusAI evaluates each coin's growth
+                            potential, filtering out only the most promising ones for further consideration.
                         </p>
                     </div>
                     <div class="step">
                         <h3>Automated Insights</h3>
                         <p>
-                            PlutusAI operates autonomously, identifying high-potential cryptocurrencies and compiling detailed insights for the community, saving investors countless hours of manual analysis.
+                            PlutusAI operates autonomously, identifying high-potential cryptocurrencies and compiling
+                            detailed insights for the community, saving investors countless hours of manual analysis.
                         </p>
                     </div>
                     <div class="step">
                         <h3>Share and Empower</h3>
                         <p>
-                            Once a promising cryptocurrency is identified, PlutusAI instantly shares the findings on Telegram, Instagram, and X, empowering the community to act on growth opportunities quickly.
+                            Once a promising cryptocurrency is identified, PlutusAI instantly shares the findings on
+                            Telegram, Instagram, and X, empowering the community to act on growth opportunities quickly.
                         </p>
                     </div>
                 </div>
@@ -129,7 +136,7 @@
     <section class="features_section">
         <div class="box1">
             <div class="box1_1">
-                <canvas class="canvas" id="myChart" style="max-width: 600px; margin: auto;"></canvas>
+                <canvas class="canvas" id="myChart" style="width: 100%; max-width: 600px; margin: auto;"></canvas>
                 <div class="box1_1div">
                     <h3>Feature 1</h3>
                     <p>Real-Time Analytics – Gain insights into token performance with live data visualization.</p>
@@ -177,7 +184,7 @@
         </div>
     </section>
 
-    
+
     <section class="section_border">
         <div class="faq_section">
             <h2 class="faq_title">Frequently Asked Questions</h2>
@@ -187,7 +194,8 @@
                     <span class="faq_icon">+</span>
                 </div>
                 <div class="faq_answer" id="faq1">
-                    PlutusAI is an AI-driven platform designed to optimize investments and discover growth opportunities in the cryptocurrency market.
+                    PlutusAI is an AI-driven platform designed to optimize investments and discover growth opportunities
+                    in the cryptocurrency market.
                 </div>
             </div>
             <div class="faq_item">
@@ -196,7 +204,8 @@
                     <span class="faq_icon">+</span>
                 </div>
                 <div class="faq_answer" id="faq2">
-                    PlutusAI scans new cryptocurrencies, analyzes potential growth factors, and shares valuable insights across multiple platforms like Telegram and X.
+                    PlutusAI scans new cryptocurrencies, analyzes potential growth factors, and shares valuable insights
+                    across multiple platforms like Telegram and X.
                 </div>
             </div>
             <div class="faq_item">
@@ -246,10 +255,10 @@
             </div>
         </div>
     </section>
-    
-    
 
-    
+
+
+
     <script>
         particlesJS("particles-js", {
             particles: {
@@ -491,18 +500,18 @@
     </script>
 
     <script>
-    function toggleFaq(id) {
-    const answer = document.getElementById(`faq${id}`);
-    const icon = answer.previousElementSibling.querySelector('.faq_icon');
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq${id}`);
+            const icon = answer.previousElementSibling.querySelector('.faq_icon');
 
-    if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-        icon.textContent = '+'; // Change back to plus icon
-    } else {
-        answer.style.display = 'block';
-        icon.textContent = '-'; // Change to minus icon
-    }
-    }
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.textContent = '+'; // Change back to plus icon
+            } else {
+                answer.style.display = 'block';
+                icon.textContent = '-'; // Change to minus icon
+            }
+        }
     </script>
 
     <script>
@@ -522,50 +531,50 @@
 
     </script>
 
-<script>
-  document.getElementById("searchButton").addEventListener("click", fetchCoinData);
+    <script>
+        document.getElementById("searchButton").addEventListener("click", fetchCoinData);
 
-    async function fetchCoinData() {
-        const address = document.getElementById("contractAddress").value.trim();
-        const resultsDiv = document.getElementById("results");
+        async function fetchCoinData() {
+            const address = document.getElementById("contractAddress").value.trim();
+            const resultsDiv = document.getElementById("results");
 
-        if (!address) {
-            resultsDiv.innerHTML = "<p>Please enter a contract address.</p>";
-            console.log("No address entered.");
-            return;
-        }
+            if (!address) {
+                resultsDiv.innerHTML = "<p>Please enter a contract address.</p>";
+                console.log("No address entered.");
+                return;
+            }
 
-        try {
-            console.log(`Fetching data for address: ${address}`);
-            const dexResponse = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${address}`);
-            console.log("Fetch response:", dexResponse);
+            try {
+                console.log(`Fetching data for address: ${address}`);
+                const dexResponse = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${address}`);
+                console.log("Fetch response:", dexResponse);
 
-            if (!dexResponse.ok) throw new Error("Token data not found on Dexscreener");
-            const dexData = await dexResponse.json();
-            console.log("Dex data:", dexData);
+                if (!dexResponse.ok) throw new Error("Token data not found on Dexscreener");
+                const dexData = await dexResponse.json();
+                console.log("Dex data:", dexData);
 
-            let dexContent = "";
-            if (dexData.pairs && dexData.pairs.length > 0) {
-                const tokenInfo = dexData.pairs[0];
-                dexContent = `
+                let dexContent = "";
+                if (dexData.pairs && dexData.pairs.length > 0) {
+                    const tokenInfo = dexData.pairs[0];
+                    dexContent = `
                     <h3>${tokenInfo.baseToken.symbol || "N/A"} (${tokenInfo.baseToken.name || "N/A"})</h3>
                     <p><strong>Price (USD):</strong> $${tokenInfo.priceUsd || "N/A"}</p>
                     <p><strong>Liquidity (USD):</strong> $${tokenInfo.liquidity.usd || "N/A"}</p>
                     <p><strong>Volume (24h):</strong> $${tokenInfo.volume.h24 || "N/A"}</p>
                     <p><strong>Contract Address:</strong> ${address}</p>
                 `;
-            } else {
-                dexContent = "<p>No data found for this token on Dexscreener.</p>";
+                } else {
+                    dexContent = "<p>No data found for this token on Dexscreener.</p>";
+                }
+
+                resultsDiv.innerHTML = dexContent;
+            } catch (error) {
+                resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+                console.error("Error fetching token data:", error);
             }
-
-            resultsDiv.innerHTML = dexContent;
-        } catch (error) {
-            resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-            console.error("Error fetching token data:", error);
         }
-    }
 
-</script>
+    </script>
 
 
 
@@ -573,4 +582,5 @@
 
 
 </body>
+
 </html>

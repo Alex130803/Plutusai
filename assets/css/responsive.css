@@ -1,0 +1,193 @@
+@media screen and (max-width: 1168px) {
+    .box1_1 {
+        flex-direction: column;
+    }
+
+    .box1_1 .canvas {
+        width: 100% !important;
+        height: 200px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .why_content h2 {
+        font-size: 2rem;
+    }
+
+    .why_created_section {
+        width: 90%;
+    }
+
+    .partners {
+        width: 90%;
+    }
+
+    .box3 {
+        flex-wrap: wrap;
+    }
+
+    .box3_1,
+    .box3_2 {
+        flex: 1 1 calc(50% - 0.5rem);
+        /* Two columns, each taking 50% */
+    }
+
+    .box3_3 {
+        flex: 1 1 100%;
+        /* Full width for the last column */
+    }
+
+
+    .faq_title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .abt {
+        flex-direction: column;
+    }
+
+    .left_side_about {
+        width: 100%;
+        order: calc(2);
+    }
+
+    .right_side_about {
+        width: 100%;
+        order: calc(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .landing_page {
+        flex-direction: column;
+    }
+
+    .left_side_lp,
+    .right_side_lp {
+        width: 100%;
+    }
+
+    .partners img {
+        width: 120px;
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+        flex-direction: column;
+    }
+
+    .box1_1 {
+        width: 100%;
+    }
+
+    .box1_2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .box2_1 {
+        width: 100%;
+    }
+
+    .box2_2 {
+        width: 100%;
+    }
+
+    .box3_1,
+    .box3_2,
+    .box3_3 {
+        width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .section_border {
+        flex-direction: column;
+    }
+
+    .faq_section {
+        width: 100%;
+    }
+
+    .animation_faq {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .footer_logo,
+    .footer_links {
+        flex: 1 1 calc(50% - 0.5rem);
+        /* Two columns, each taking 50% */
+    }
+
+    .footer_social {
+        flex: 1 1 100%;
+        /* Full width for the last column */
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .why_content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about .stats {
+        gap: 30px;
+    }
+
+    .about .stats h3 {
+        font-size: 1.5rem;
+    }
+
+    .step h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .abt {
+        padding: 20px;
+    }
+
+    .partners img {
+        width: 100px;
+    }
+
+    .why_created {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about h2 {
+        font-size: 1.2rem;
+    }
+
+    .why_content h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq_title {
+        font-size: 1.2rem;
+    }
+
+    .partners {
+        flex-wrap: wrap;
+    }
+
+    .about .stats {
+        flex-wrap: wrap;
+    }
+
+}
