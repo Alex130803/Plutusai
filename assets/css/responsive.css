@@ -20,7 +20,7 @@
     }
 
     .why_created_section {
-        width: 90%;
+        width: 100%;
     }
 
     .partners {
@@ -109,7 +109,7 @@
     }
 
     .section_border {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .faq_section {
