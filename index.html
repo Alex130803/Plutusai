@@ -531,50 +531,74 @@
 
     </script>
 
-    <script>
-        document.getElementById("searchButton").addEventListener("click", fetchCoinData);
+<script>
+    document.getElementById("searchButton").addEventListener("click", fetchCoinData);
 
-        async function fetchCoinData() {
-            const address = document.getElementById("contractAddress").value.trim();
-            const resultsDiv = document.getElementById("results");
+    async function fetchCoinData() {
+        const address = document.getElementById("contractAddress").value.trim();
+        const resultsDiv = document.getElementById("results");
 
-            if (!address) {
-                resultsDiv.innerHTML = "<p>Please enter a contract address.</p>";
-                console.log("No address entered.");
-                return;
-            }
-
-            try {
-                console.log(`Fetching data for address: ${address}`);
-                const dexResponse = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${address}`);
-                console.log("Fetch response:", dexResponse);
-
-                if (!dexResponse.ok) throw new Error("Token data not found on Dexscreener");
-                const dexData = await dexResponse.json();
-                console.log("Dex data:", dexData);
-
-                let dexContent = "";
-                if (dexData.pairs && dexData.pairs.length > 0) {
-                    const tokenInfo = dexData.pairs[0];
-                    dexContent = `
-                    <h3>${tokenInfo.baseToken.symbol || "N/A"} (${tokenInfo.baseToken.name || "N/A"})</h3>
-                    <p><strong>Price (USD):</strong> $${tokenInfo.priceUsd || "N/A"}</p>
-                    <p><strong>Liquidity (USD):</strong> $${tokenInfo.liquidity.usd || "N/A"}</p>
-                    <p><strong>Volume (24h):</strong> $${tokenInfo.volume.h24 || "N/A"}</p>
-                    <p><strong>Contract Address:</strong> ${address}</p>
-                `;
-                } else {
-                    dexContent = "<p>No data found for this token on Dexscreener.</p>";
-                }
-
-                resultsDiv.innerHTML = dexContent;
-            } catch (error) {
-                resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-                console.error("Error fetching token data:", error);
-            }
+        if (!address) {
+            resultsDiv.innerHTML = "<p>Please enter a contract address.</p>";
+            console.log("No address entered.");
+            return;
         }
 
-    </script>
+        try {
+            console.log(`Fetching data for address: ${address}`);
+            
+            // Solana Tracker API fetch
+            const response = await fetch(`https://data.solanatracker.io/tokens/${address}`, {
+                method: "GET",
+                headers: {
+                    "x-api-key": "41eaf73b-9f21-45f2-8085-73489a7b69e5", // Your Solana Tracker API Key
+                },
+            });
+
+            if (!response.ok) throw new Error("Token data not found on Solana Tracker");
+
+            const data = await response.json();
+            console.log("Solana Tracker data:", data);
+
+            let content = "";
+
+            if (data.token && data.pools && data.pools.length > 0) {
+                const token = data.token;
+                const pool = data.pools[0]; // Display data from the first pool
+
+                content = `
+                    <h3>${token.name || "N/A"} (${token.symbol || "N/A"})</h3>
+                    <img src="${token.image || '#'}" alt="Token Image" style="width: 150px; height: 150px;" />
+                    <p><strong>Price (USD):</strong> $${pool.price.usd.toFixed(6)}</p>
+                    <p><strong>Liquidity (USD):</strong> $${pool.liquidity.usd.toFixed(2)}</p>
+                    <p><strong>Market Cap (USD):</strong> $${pool.marketCap.usd.toFixed(2)}</p>
+                    <p><strong>Contract Address:</strong> ${token.mint}</p>
+                    <p><strong>Deployer:</strong> ${pool.deployer || "N/A"}</p>
+                    <p><strong>Buy Transactions:</strong> ${pool.txns.buys}</p>
+                    <p><strong>Sell Transactions:</strong> ${pool.txns.sells}</p>
+                    <p><strong>Total Transactions:</strong> ${pool.txns.total}</p>
+                    <h4>Price Change:</h4>
+                    <p><strong>1h:</strong> ${data.events["1h"].priceChangePercentage.toFixed(2)}%</p>
+                    <p><strong>24h:</strong> ${data.events["24h"].priceChangePercentage.toFixed(2)}%</p>
+                    <p><strong>7d:</strong> ${data.events["7d"] ? data.events["7d"].priceChangePercentage.toFixed(2) : "N/A"}%</p>
+                    <h4>Risk Analysis:</h4>
+                    ${data.risk.risks.map(risk => `
+                        <p><strong>${risk.name}:</strong> ${risk.description} (Level: ${risk.level})</p>
+                    `).join("")}
+                `;
+            } else {
+                content = "<p>No data found for this token on Solana Tracker.</p>";
+            }
+
+            resultsDiv.innerHTML = content;
+        } catch (error) {
+            resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+            console.error("Error fetching token data:", error);
+        }
+    }
+</script>
+
+
 
 
 
