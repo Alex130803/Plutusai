@@ -680,6 +680,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 54px;
 }
 
 .box2_2 {
@@ -707,6 +708,14 @@ body {
 #lottie-animation7 {
     width: 90px;
     height: 90px;
+    margin: auto;
+    display: block;
+    background: transparent;
+}
+
+#lottie-animation9 {
+    width: 130px;
+    height: 130px;
     margin: auto;
     display: block;
     background: transparent;
