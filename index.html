@@ -23,7 +23,7 @@
 
     <section class="landing_page">
         <div id="particles-js"></div>
-
+    
         <!-- Left Side Content -->
         <div class="left_side_lp">
             <img src="assets/img/Plutus.png" alt="PlutusAI">
@@ -33,22 +33,30 @@
                 <a class="under_img_btn" href="">Buy $PlutusAI</a>
             </div>
         </div>
-
+    
         <!-- Right Side Content -->
         <div class="right_side_lp">
             <div class="coin_info">
                 <h2>Track a Coin</h2>
-                <p>Enter a contract address to get real-time data.</p>
+                <p>Enter a contract address and your X username to get real-time data and insights!</p>
+                
+                <!-- Contract Address Input -->
                 <input type="text" id="contractAddress" placeholder="Enter Contract Address">
+                
+                <!-- X Username Input -->
+                <input type="text" id="xUsername" placeholder="Enter X Username">
+                
+                <!-- Search Button -->
                 <button onclick="fetchCoinData()">Search</button>
             </div>
-
+    
             <!-- Placeholder for Coin Data -->
             <div id="results" class="coin_results">
                 <!-- Data will be dynamically injected here -->
             </div>
         </div>
     </section>
+    
 
 
 
@@ -548,11 +556,18 @@
 
     async function fetchCoinData() {
         const address = document.getElementById("contractAddress").value.trim();
+        const username = document.getElementById("xUsername").value.trim(); // Input for X username
         const resultsDiv = document.getElementById("results");
 
         if (!address) {
             resultsDiv.innerHTML = "<p>Please enter a contract address.</p>";
             console.log("No address entered.");
+            return;
+        }
+
+        if (!username) {
+            resultsDiv.innerHTML = "<p>Please enter your X username.</p>";
+            console.log("No X username entered.");
             return;
         }
 
@@ -603,11 +618,30 @@
             }
 
             resultsDiv.innerHTML = content;
+
+            // Post to X
+            const message = `Token: ${data.token.name} (${data.token.symbol})\nPrice: $${data.pools[0].price.usd.toFixed(6)}\nLiquidity: $${data.pools[0].liquidity.usd.toFixed(2)}\nMarket Cap: $${data.pools[0].marketCap.usd.toFixed(2)}\n#PlutusAI`;
+            
+            const postResponse = await fetch('http://localhost:3000/api/postToX', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, message }),
+            });
+
+            if (!postResponse.ok) throw new Error("Failed to post to X");
+
+            const result = await postResponse.json();
+            console.log('Tweet result:', result);
+
+            resultsDiv.innerHTML += `<p>Tweet posted successfully! Check @${username}'s timeline.</p>`;
         } catch (error) {
-            resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-            console.error("Error fetching token data:", error);
+            resultsDiv.innerHTML += `<p>Error: ${error.message}</p>`;
+            console.error("Error:", error);
         }
-    }
+}
+
 </script>
 
 
