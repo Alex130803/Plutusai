@@ -620,7 +620,7 @@
             resultsDiv.innerHTML = content;
 
             // Post to X
-            const message = `Token: ${data.token.name} (${data.token.symbol})\nPrice: $${data.pools[0].price.usd.toFixed(6)}\nLiquidity: $${data.pools[0].liquidity.usd.toFixed(2)}\nMarket Cap: $${data.pools[0].marketCap.usd.toFixed(2)}\n#PlutusAI`;
+            const message = `Hey,\nToken: ${data.token.name} (${data.token.symbol})\nPrice: $${data.pools[0].price.usd.toFixed(6)}\nLiquidity: $${data.pools[0].liquidity.usd.toFixed(2)}\nMarket Cap: $${data.pools[0].marketCap.usd.toFixed(2)}\n#PlutusAI`;
             
             const postResponse = await fetch('http://localhost:3000/api/postToX', {
                 method: 'POST',
