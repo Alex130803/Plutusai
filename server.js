@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const Twitter = require("twitter-v2");
-const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -19,12 +18,12 @@ app.use(
 // Middleware to parse JSON
 app.use(express.json());
 
-// Serve static files (e.g., index.html, style.css, assets)
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files directly (if not in a separate public folder)
+app.use(express.static(__dirname));
 
-// Fallback route for serving index.html
+// Serve `index.html` for the root route
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"));
+    res.sendFile(__dirname + "/index.html");
 });
 
 // Twitter API setup and endpoint
