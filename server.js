@@ -1,23 +1,30 @@
 const express = require("express");
 const cors = require("cors");
 const Twitter = require("twitter-v2");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Enable CORS
-app.use(cors());
+// Enable CORS (allow your domain)
+app.use(
+    cors({
+        origin: ["https://plutusai.org", "https://www.plutusai.org"], // Add your domain(s) here
+        methods: ["GET", "POST"],
+        allowedHeaders: ["Content-Type"],
+    })
+);
 
 // Middleware to parse JSON
 app.use(express.json());
 
-// Serve static files (e.g., index.html, style.css, scripts, assets) directly
-app.use(express.static(__dirname));
+// Serve static files (e.g., index.html, style.css, assets)
+app.use(express.static(path.join(__dirname, "public")));
 
-// Fallback route for serving the index.html
+// Fallback route for serving index.html
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Twitter API setup and endpoint
@@ -29,7 +36,7 @@ app.post("/api/postToX", async (req, res) => {
     }
 
     try {
-        const tweet = `@${username} Here's an update on your token request:\n\n${message}`;
+        const tweet = `Hey, @${username} Here's an update on your token request:\n\n${message}`;
         const client = new Twitter({
             consumer_key: process.env.TWITTER_API_KEY,
             consumer_secret: process.env.TWITTER_API_SECRET,
