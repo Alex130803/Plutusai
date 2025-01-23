@@ -622,7 +622,7 @@
             // Post to X
             const message = `Hey,\nToken: ${data.token.name} (${data.token.symbol})\nPrice: $${data.pools[0].price.usd.toFixed(6)}\nLiquidity: $${data.pools[0].liquidity.usd.toFixed(2)}\nMarket Cap: $${data.pools[0].marketCap.usd.toFixed(2)}\n#PlutusAI`;
             
-            const postResponse = await fetch('http://localhost:3000/api/postToX', {
+            const postResponse = await fetch('http://plutusai.onrender.com/api/postToX', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
