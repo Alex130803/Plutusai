@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const Twitter = require("twitter-v2");
+const { TwitterApi } = require("twitter-api-v2"); // Updated to use twitter-api-v2
 require("dotenv").config();
 
 const app = express();
@@ -36,14 +36,15 @@ app.post("/api/postToX", async (req, res) => {
 
     try {
         const tweet = `Hey, @${username} Here's an update on your token request:\n\n${message}`;
-        const client = new Twitter({
-            consumer_key: process.env.TWITTER_API_KEY,
-            consumer_secret: process.env.TWITTER_API_SECRET,
-            access_token_key: process.env.TWITTER_ACCESS_TOKEN,
-            access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+        const client = new TwitterApi({
+            appKey: process.env.TWITTER_API_KEY,
+            appSecret: process.env.TWITTER_API_SECRET,
+            accessToken: process.env.TWITTER_ACCESS_TOKEN,
+            accessSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
         });
 
-        const response = await client.post("tweets", { text: tweet });
+        // Post the tweet
+        const response = await client.v2.tweet(tweet);
         res.status(200).json({ success: true, response });
     } catch (error) {
         console.error("Error posting to X:", error);
