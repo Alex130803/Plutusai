@@ -6,10 +6,10 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Enable CORS (allow your domain)
+// Enable CORS for your custom domain
 app.use(
     cors({
-        origin: ["https://plutusai.org", "https://www.plutusai.org"], // Add your domain(s) here
+        origin: ["https://plutusai.org", "https://www.plutusai.org"], // Add all valid origins
         methods: ["GET", "POST"],
         allowedHeaders: ["Content-Type"],
     })
@@ -18,15 +18,15 @@ app.use(
 // Middleware to parse JSON
 app.use(express.json());
 
-// Serve static files directly (if not in a separate public folder)
+// Serve static files from the root directory
 app.use(express.static(__dirname));
 
-// Serve `index.html` for the root route
+// Serve `index.html` at the root route
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 });
 
-// Twitter API setup and endpoint
+// Twitter API endpoint
 app.post("/api/postToX", async (req, res) => {
     const { username, message } = req.body;
 
@@ -51,7 +51,7 @@ app.post("/api/postToX", async (req, res) => {
     }
 });
 
-// Start the server
+// Start the server on the Render-assigned port
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
