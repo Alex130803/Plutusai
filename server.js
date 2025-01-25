@@ -35,7 +35,7 @@ app.post("/api/postToX", async (req, res) => {
     }
 
     try {
-        const tweet = `Hey, @${username} Here's an update on your token request:\n\n${message}`;
+        const tweet = `@${username} Here's an update on your token request:\n\n${message}`;
         const client = new TwitterApi({
             appKey: process.env.TWITTER_API_KEY,
             appSecret: process.env.TWITTER_API_SECRET,

@@ -635,7 +635,13 @@
             const result = await postResponse.json();
             console.log('Tweet result:', result);
 
-            resultsDiv.innerHTML += `<p>Tweet posted successfully! Check @${username}'s timeline.</p>`;
+            resultsDiv.innerHTML += `
+                <p>
+                    Tweet posted successfully! Check your tweet 
+                    <a href="https://x.com/PlutusAI_Agent" target="_blank" rel="noopener noreferrer">
+                        here!
+                    </a>.
+                </p>`;
         } catch (error) {
             resultsDiv.innerHTML += `<p>Error: ${error.message}</p>`;
             console.error("Error:", error);
